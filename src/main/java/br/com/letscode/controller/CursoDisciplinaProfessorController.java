@@ -2,15 +2,16 @@ package br.com.letscode.controller;
 
 import br.com.letscode.entity.CursoDisciplinaProfessor;
 import br.com.letscode.repository.CursoDisciplinaRepository;
-import org.springframework.beans.factory.annotation.Autowired;
+import lombok.AllArgsConstructor;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 
+@AllArgsConstructor
 @RequestMapping("/cursoDisciplinas")
 @RestController
 public class CursoDisciplinaProfessorController {
 
-    private CursoDisciplinaRepository cursoDisciplinaRepository;
+    private final CursoDisciplinaRepository cursoDisciplinaRepository;
 
     @PostMapping
     public CursoDisciplinaProfessor cadastrar (@RequestBody CursoDisciplinaProfessor cursoDisciplinaProfessor){

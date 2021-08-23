@@ -1,5 +1,4 @@
 package br.com.letscode.controller;
-
 import br.com.letscode.entity.Aluno;
 import br.com.letscode.repository.AlunoRepository;
 import br.com.letscode.repository.CursoRepository;
@@ -7,7 +6,6 @@ import br.com.letscode.request.AlunoRequest;
 import br.com.letscode.request.AlunoRequestAtualizar;
 import br.com.letscode.response.AlunoResponse;
 import lombok.AllArgsConstructor;
-import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 import org.springframework.web.util.UriComponentsBuilder;
@@ -20,9 +18,9 @@ import java.util.List;
 @RequestMapping("/alunos")
 public class AlunoController {
 
-    @Autowired
+
     private final AlunoRepository alunoRepository;
-    @Autowired
+
     private final CursoRepository cursoRepository;
 
     @GetMapping
@@ -54,7 +52,7 @@ public class AlunoController {
             @PathVariable int ra,
             @RequestBody AlunoRequestAtualizar alunoRequestAtualizar
     ){
-        Aluno aluno = alunoRequestAtualizar.convert(cursoRepository,ra);
+        Aluno aluno = alunoRequestAtualizar.convert(cursoRepository, ra);
         alunoRepository.save(aluno);
         return ResponseEntity.ok(new AlunoResponse(aluno));
     }

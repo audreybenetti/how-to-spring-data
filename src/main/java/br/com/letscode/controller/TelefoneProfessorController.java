@@ -1,17 +1,17 @@
 package br.com.letscode.controller;
-
 import br.com.letscode.entity.TelefoneProfessor;
 import br.com.letscode.repository.TelefoneProfessorRepository;
-import org.springframework.beans.factory.annotation.Autowired;
+import lombok.AllArgsConstructor;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 
+@AllArgsConstructor
 @RestController
 @RequestMapping("/telefones")
 public class TelefoneProfessorController {
 
-    @Autowired
-    private TelefoneProfessorRepository telefoneProfessorRepository;
+
+    private final TelefoneProfessorRepository telefoneProfessorRepository;
 
     @PostMapping
     public TelefoneProfessor cadastrar (@RequestBody TelefoneProfessor telefoneProfessor){

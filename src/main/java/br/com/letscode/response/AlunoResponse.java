@@ -3,7 +3,6 @@ package br.com.letscode.response;
 import br.com.letscode.entity.Aluno;
 import br.com.letscode.entity.Curso;
 import lombok.Getter;
-
 import java.util.Date;
 import java.util.List;
 import java.util.stream.Collectors;

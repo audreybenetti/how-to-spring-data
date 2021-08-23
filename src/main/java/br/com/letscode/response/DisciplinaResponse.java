@@ -2,9 +2,9 @@ package br.com.letscode.response;
 
 import br.com.letscode.entity.Disciplina;
 import lombok.Getter;
-
 import java.util.List;
 import java.util.stream.Collectors;
+
 @Getter
 public class DisciplinaResponse {
     private final int codigoDisciplina;

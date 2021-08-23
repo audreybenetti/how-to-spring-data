@@ -13,8 +13,9 @@ public class CursoRequest {
     private String nomeCurso;
     private int duracao;
     private int numeroAlunos;
+    private Modalidade modalidade;
 
     public Curso convert(){
-        return new Curso(getCodigoCurso(),nomeCurso,duracao,numeroAlunos, Modalidade.PRESENCIAL);
+        return new Curso(getCodigoCurso(),nomeCurso,duracao,numeroAlunos, modalidade);
     }
 }

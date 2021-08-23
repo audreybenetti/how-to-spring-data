@@ -5,22 +5,22 @@ import br.com.letscode.repository.DisciplinaRepository;
 import br.com.letscode.request.DisciplinaRequest;
 import br.com.letscode.request.DisciplinaRequestAtualizar;
 import br.com.letscode.response.DisciplinaResponse;
-import org.springframework.beans.factory.annotation.Autowired;
+import lombok.AllArgsConstructor;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 import org.springframework.web.util.UriComponentsBuilder;
-
 import java.net.URI;
 import java.util.List;
 
+@AllArgsConstructor
 @RestController
 @RequestMapping("/disciplinas")
 public class DisciplinaController {
 
-    @Autowired
-    private DisciplinaRepository disciplinaRepository;
 
-    @PutMapping
+    private final DisciplinaRepository disciplinaRepository;
+
+    @PostMapping
     public ResponseEntity<DisciplinaResponse> cadastrar (@RequestBody DisciplinaRequest disciplinaRequest,
                                                            UriComponentsBuilder uriComponentsBuilder){
         Disciplina disciplina = disciplinaRequest.convert();

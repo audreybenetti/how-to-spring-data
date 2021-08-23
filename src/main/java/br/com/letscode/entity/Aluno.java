@@ -16,7 +16,7 @@ import java.util.Date;
 @Table(name="aluno")
 public class Aluno {
 
-    @Id @GeneratedValue(strategy = GenerationType.AUTO)
+    @Id @GeneratedValue(strategy = GenerationType.SEQUENCE)
     private int ra;
     private String nome;
     private String sobrenome;

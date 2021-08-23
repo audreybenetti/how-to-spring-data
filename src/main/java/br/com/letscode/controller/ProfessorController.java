@@ -1,29 +1,25 @@
 package br.com.letscode.controller;
 
-import br.com.letscode.entity.Aluno;
 import br.com.letscode.entity.Professor;
 import br.com.letscode.repository.CursoRepository;
 import br.com.letscode.repository.ProfessorRepository;
 import br.com.letscode.request.ProfessorRequest;
 import br.com.letscode.request.ProfessorRequestAtualizar;
-import br.com.letscode.response.AlunoResponse;
 import br.com.letscode.response.ProfessorResponse;
-import org.springframework.beans.factory.annotation.Autowired;
+import lombok.AllArgsConstructor;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 import org.springframework.web.util.UriComponentsBuilder;
-
 import java.net.URI;
 import java.util.List;
 
+@AllArgsConstructor
 @RestController
 @RequestMapping("/professores")
 public class ProfessorController {
-    @Autowired
-    private ProfessorRepository professorRepository;
 
-    @Autowired
-    private CursoRepository cursoRepository;
+    private final ProfessorRepository professorRepository;
+    private final CursoRepository cursoRepository;
 
     @PostMapping
     public ResponseEntity<ProfessorResponse> cadastrar(@RequestBody ProfessorRequest professorRequest,
@@ -41,8 +37,8 @@ public class ProfessorController {
     }
 
     @GetMapping("/{codigoProfessor}")
-    public ProfessorResponse buscarProfessorPorCodigo(@PathVariable int codigo){
-        Professor professor = professorRepository.getById(codigo);
+    public ProfessorResponse buscarProfessorPorCodigo(@PathVariable int codigoProfessor){
+        Professor professor = professorRepository.getById(codigoProfessor);
         return new ProfessorResponse(professor);
     }
 

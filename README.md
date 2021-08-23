@@ -10,7 +10,7 @@ a implementação automaticamente o poupando desse trabalho.</i>
 <h3>Pré-requisitos:</h3><a id="pre-requisitos"></a>
 
 Antes de começar você precisará ter em sua máquina as seguintes ferramentas: [Git](https://git-scm.com/),
-[Java 11](https://www.oracle.com/java/technologies/javase-jdk11-downloads.html), [Maven](https://maven.apache.org/download.cgi) e um [SQL Server](https://www.microsoft.com/pt-br/sql-server/sql-server-downloads).
+[Java 11](https://www.oracle.com/java/technologies/javase-jdk11-downloads.html) e [Maven](https://maven.apache.org/download.cgi).
 Além disto, é necessário ter um editor para trabalhar com o código como o [IntelliJ IDEA](https://www.jetbrains.com/pt-br/idea/download/).
  
 <h3>Tecnologias:</h3><a id="tecnologias"></a>
@@ -21,7 +21,6 @@ Além disto, é necessário ter um editor para trabalhar com o código como o [I
   <li>Spring Boot</li>
   <li>JPA</li>
   <li>Hibernate</li>
-  <li>Microsoft SQL Server</li>
   <li>Lombok</li>
   </ul>
   
@@ -31,7 +30,7 @@ Além disto, é necessário ter um editor para trabalhar com o código como o [I
 
   <h3>Tarefas:</h3> 
   
-  - [ ] Habilitar banco de dados H2 em memória.
+  - [x] Habilitar banco de dados H2 em memória.
   - [ ] Adicionar consultas pela anotação @Query.
   - [ ] Adicionar testes através da anotação @DataJpaTest.  
   - [ ] Adicionar paging e sorting aos repositórios.

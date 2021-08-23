@@ -5,7 +5,7 @@ import br.com.letscode.repository.CursoRepository;
 import br.com.letscode.request.CursoRequest;
 import br.com.letscode.request.CursoRequestAtualizar;
 import br.com.letscode.response.CursoResponse;
-import org.springframework.beans.factory.annotation.Autowired;
+import lombok.AllArgsConstructor;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 import org.springframework.web.util.UriComponentsBuilder;
@@ -13,13 +13,12 @@ import org.springframework.web.util.UriComponentsBuilder;
 import java.net.URI;
 import java.util.List;
 
+@AllArgsConstructor
 @RestController
 @RequestMapping("/cursos")
 public class CursoController {
 
-    @Autowired
-    private CursoRepository cursoRepository;
-
+    private final CursoRepository cursoRepository;
 
     @GetMapping
     public List<CursoResponse> buscarCursos(){
