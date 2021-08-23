@@ -29,6 +29,14 @@ Além disto, é necessário ter um editor para trabalhar com o código como o [I
   
   Inicie a aplicação e siga para o [Postman](https://www.postman.com/downloads/).  
 
+  <h3>Tarefas:</h3> 
+  
+  - [ ] Habilitar banco de dados H2 em memória.
+  - [ ] Adicionar consultas pela anotação @Query.
+  - [ ] Adicionar testes através da anotação @DataJpaTest.  
+  - [ ] Adicionar paging e sorting aos repositórios.
+  - [ ] Expandir consultas através do framework QuerySQL.
+ 
 
   <h3>Documentação:</h3>
   https://spring.io/projects/spring-data
